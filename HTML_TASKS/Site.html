@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Техніки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler/dist/jquery.formstyler.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        header {
+            background-color: #4800ff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+
+        section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1; 
+        }
+
+            section > div {
+                max-width: 100%;
+            }
+
+        form {
+            max-width: 100%;
+            margin: 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ccc;
+        }
+
+            form label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            form input,
+            form textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            form button {
+                background-color: #4800ff;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            form .checkbox-label {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+                form .checkbox-label input {
+                    margin-right: 10px;
+                }
+
+        footer {
+            background-color: #4800ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+            footer a,
+            footer .social-icons a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+            footer .social-icons {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+                footer .social-icons img {
+                    width: 30px;
+                    margin: 0 5px;
+                }
+
+        @media only screen and (min-width: 600px) {
+            section {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            form {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Магазин Техніки</h1>
+        <nav>
+            <a href="Site.html">Головна</a>
+            <a href="News.html">Новини</a>
+            <a href="Tech.html">Техніка</a>
+            <a href="Contacts.html">Контакти</a>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <h2>Магазин техніки</h2>
+            <p>На нашому сайті ви знайдете безліч вигідних та фантастичних пропозицій.</p>
+            <img src="1.jpg" alt="Опис зображення">
+        </div>
+        <div>
+            <h2>Про нас</h2>
+            <p>Наш магазин був заснований в 2023 році та вже як рік знаходиться в лідерах рейтингу.</p>
+        </div>
+        <form>
+            <label for="name">Ім'я користувача:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Номер мобільного телефону (+380):</label>
+            <input type="tel" id="phone" name="phone" pattern="^\+380\d{9}$" required>
+
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label class="checkbox-label">
+                <input type="checkbox" name="agree" required>
+                Я погоджуюсь з використанням особистих даних
+            </label>
+
+            <button type="submit">Відправити</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="useful-links">
+            <a href="#">Посилання 1</a>
+            <a href="#">Посилання 2</a>
+            <a href="#">Посилання 3</a>
+        </div>
+        <p>&copy; 2024 Магазин Техніки</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="2.jpg" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="4.jpg" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="3.jpg" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler/dist/jquery.formstyler.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').formstyler();
+        });
+    </script>
+
+</body>
+
+</html>
